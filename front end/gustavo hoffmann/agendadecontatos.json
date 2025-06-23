@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Julia Sagaz",
+    "numeroTelefone": 123,
+    "email": "juliasagaz@gmail.com",
+    "redesSociais": {
+        "youtube": "JuliaSg",
+        "twitter": "@juliaMorrinho",
+        "instagram": "@JuSagazzs"
+    }
+  },
+  {
+    "nome": "João Pessoa",
+    "numeroTelefone": 456,
+    "email": "joPesPes@gmail.com",
+    "redesSociais": {
+        "youtube": "JOPESSOA",
+        "twitter": "@juanPersona",
+        "instagram": "@joaoppp.p"
+    }
+  },
+  {
+    "nome": "Luva de Pedreiro",
+    "numeroTelefone": 789,
+    "email": "luvaDePedreiro@outlook.com",
+    "redesSociais": {
+        "youtube": "pedrero luva",
+        "twitter": "@PedroLuvas",
+        "instagram": "@pepepe.luluva"
+    }
+  }
+]

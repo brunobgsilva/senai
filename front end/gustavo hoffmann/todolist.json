@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "tarefa": "Me arrumar pra ir pra escola",
+    "prioridade": "Alta"
+  },
+
+  {
+    "id": 2,
+    "tarefa": "Prestar atenção nas aulas e realizar as atividades",
+    "prioridade": "Média"
+  },
+
+  {
+    "id": 3,
+    "tarefa": "Voltar do centro até minha casa",
+    "prioridade": "Alta"
+  },
+
+  {
+    "id": 4,
+    "tarefa": "Almoçar",
+    "prioridade": "Alta"
+  },
+
+  {
+    "id": 5,
+    "tarefa": "Exercitar meus hobbies",
+    "prioridade": "Baixa"
+  },
+
+  {
+    "id": 6,
+    "tarefa": "Conversar com meus amigos",
+    "prioridade": "Média"
+  }
+]
