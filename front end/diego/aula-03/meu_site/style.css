@@ -1,5 +1,5 @@
 * {
-   font-family: Arial;
+   font-family: Arial, system-ui;
    margin: 0;
 }
 a, nav {
@@ -63,7 +63,7 @@ nav {
 .tecnology img {
    width: 66px;
    height: 66px;
-   margin-right: 20pxe;
+   margin-right: 20px;
 }
 
 .img-header {
