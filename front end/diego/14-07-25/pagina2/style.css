@@ -1,0 +1,30 @@
+* {
+    font-family: Verdana;
+    line-height: 1.15px;
+}
+
+.title {
+    justify-self: center;
+}
+
+p {
+    justify-self: center;
+}
+
+.paragrafo1 {
+    font-weight: bold;
+}
+
+.paragrafo2 {
+    font-weight: 100;
+    color: blueviolet;
+}
+
+.caixa {
+    justify-self: center;
+    display: flex;
+    border-radius: 7px;
+    border: 2px dashed black;
+    padding: 100px 200px;
+    margin: 10px;
+}
