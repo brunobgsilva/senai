@@ -1,0 +1,82 @@
+* {
+    font-family: Arial, system-ui;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(149, 149, 209);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    justify-content: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    padding: 15px;
+    padding-top: 0px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    transition: all 0.2s;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px;
+    padding-top: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:hover {
+        background-color: rgb(231, 231, 231);
+        cursor: pointer;
+    }
+
+}
+
+.section-content {
+    margin-top: 15px;
+    transition: all 0.2s;
+    height: 80px;
+}
+
+.closed-section {
+    margin-top: 15px;
+    overflow: hidden;
+    transition: all 0.2s;
+    height: 0px;
+}
