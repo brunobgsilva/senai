@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="adicionarNome(prompt('Insira um nome.'))">Adicionar nome</button>
+    <button onclick="trocarNome()">Trocar nome</button>
+    <button onclick="listarNomes()">Listar nome</button>
+    <button onclick="removerNome()">Remover nome</button>
+    
+<script>
+
+const listaNomes = ['Carlos', 'Carla'];
+
+function listarNomes() {
+    console.log('|||||||||||| LISTA DE NOMES ||||||||||||')
+    listaNomes.forEach((nome, index) => {
+        console.log(`${index}: ${nome}`);
+    });
+};
+
+function adicionarNome(nome) {
+    listaNomes.push(nome);
+    listarNomes();
+};
+
+function trocarNome() {
+    const indexPraTroca = prompt('Insira o indice do nome para trocar.');
+    const novoNome = prompt('Insira o novo nome.');
+    listaNomes[indexPraTroca] = novoNome;
+    listarNomes();
+}
+
+function removerNome() {
+    const indexPraRemover = prompt('Insira o indice do nome que deseja remover.')
+    listaNomes.splice(indexPraRemover, 1);
+    listarNomes();
+}
+
+</script>
+
+</body>
+</html>

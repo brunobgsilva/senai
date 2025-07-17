@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="listarNomes()">Listar nomes</button>
+
+    <br>
+    <br>
+
+    <input type="text" id="input-nome" placeholder="Insira um nome.">
+    <button onclick="adicionarNome()">Adicionar nome</button>
+
+    <br>
+    <br>
+
+    <input type="text" id="input-trocarNome" placeholder="Insira um nome.">
+    <input type="number" id="input-trocarNomeIndex" placeholder="Insira o index para trocar.">
+    <button onclick="trocarNome()">Trocar nome</button>
+
+    <br>
+    <br>
+
+    <input type="text" id="input-removerNomeIndex" placeholder="Insira o index para remover.">
+    <button onclick="removerNome()">Remover nome</button>
+
+    <ol class="lista-nomes">
+    </ol>
+    
+<script>
+
+const listaNomes = ['Carlos', 'Carla'];
+
+function listarNomes() {
+    console.log('|||||||||||| LISTA DE NOMES ||||||||||||')
+    listaNomes.forEach((nome, index) => {
+        console.log(`${index}: ${nome}`);
+    });
+    atualizarListaHTML();
+};
+
+function adicionarNome() {
+    const nome = document.getElementById('input-nome').value;
+    listaNomes.push(nome);
+    listarNomes();
+};
+
+function trocarNome() {
+    const indexPraTroca = document.getElementById('input-trocarNomeIndex').valueAsNumber;
+    const novoNome = document.getElementById('input-trocarNome').value;
+    listaNomes[indexPraTroca] = novoNome;
+    listarNomes();
+}
+
+function removerNome() {
+    const indexPraRemover = document.getElementById('input-removerNomeIndex').valueAsNumber;
+    listaNomes.splice(indexPraRemover, 1);
+    listarNomes();
+}
+
+function atualizarListaHTML() {
+    const lista = document.querySelector('.lista-nomes');
+    lista.innerHTML = `<p> Lista de nomes: </p>`;
+
+    listaNomes.forEach((nome) => {
+        let li = document.createElement('li');
+        li.innerText = `${nome}`;
+        lista.appendChild(li);
+    });
+    
+}
+
+</script>
+
+</body>
+</html>
