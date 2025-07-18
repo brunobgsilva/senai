@@ -1,23 +1,56 @@
 * {
-    font-family: Arial, system-ui;
+    font-family: Lexend, Arial, system-ui;
     margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
 }
 
 .page {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
+    padding: 0px 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .content {
     display: flex;
     justify-content: center;
-    padding-top: 4rem;
+    padding: 4rem 0;
+}
+
+.content-top {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.content-middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-bottom {
+    display: flex;
+    justify-content: center;
 }
 
 .header {
     display: flex;
-    background-color: rgb(221, 221, 221);
+    background-color: #60be97;
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     justify-content: center;
     position: fixed;
     left: 0;
@@ -26,6 +59,14 @@
     height: 3rem;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    z-index: 1000;
+    transition: all 0.2s;
+    border-bottom: 3px dashed #368564;
+}
+
+.page-description {
+    font-size: 20px;
 }
 
 .footer {
@@ -34,12 +75,13 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(149, 149, 209);
+    background-color: rgb(54, 116, 87);
     color: white;
     justify-content: center;
     align-items: center;
     height: 3rem;
     justify-content: center;
+    transition: all 0.2s;
 }
 
 .section {
@@ -48,28 +90,58 @@
     border: 1px solid rgba(0, 0, 0, 0.75);
     border-radius: 10px;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    width: auto;
     transition: all 0.2s ease-out;
+    background-color: white;
+}
+
+.active-section, .section-title:hover {
+    background-color: rgb(231, 231, 231);
 }
 
 .section-title {
     user-select: none;
     font-weight: bold;
     font-size: 20px;
-    padding: 13px 15px;
+    padding: 10px 40px;
     border-radius: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease-out;
+    cursor: pointer;
+    position: relative;
+}
 
-    &:hover {
-        background-color: rgb(231, 231, 231);
-        cursor: pointer;
-    }
+.section-title::after {
+    content: "\203A";
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 20px;
+    transition: all 0.2s;
+}
 
+.section-title.active-section::after {
+    rotate: 90deg;
 }
 
 .section-content {
-    padding: 15px 0px;
+    margin: 10px 0;
+    transition: all 0.2s;
     overflow: hidden;
-    display: none;
+    max-height: 0px;
+}
+
+@media (width < 440px) {
+    .header {
+        font-size: 12px;
+    }
+}
+
+.content-bottom img {
+    animation: spin 3s linear 0s infinite reverse;
+}
+
+@keyframes spin {
+    0% {rotate: 0deg;}
+    100% {rotate: 360deg;}
 }
