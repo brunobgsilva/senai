@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="chamarServer()"> chamar server </button>
+
+    <script>
+
+        function chamarServer() {
+            fetch('http://localhost:8484/api/data', {
+                method: 'POST',
+                body: JSON.stringify(dados)
+            })
+            .then((res) => { 
+                console.log(res)
+            });
+        }
+
+    </script>
+
+</body>
+</html>

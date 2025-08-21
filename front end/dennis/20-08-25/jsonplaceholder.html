@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPlaceHolder</title>
+
+</head>
+
+<body>
+
+    <input type="number" id="num-input" placeholder="Digite um numero">
+    <button onclick="fetchJson()">Enviar numero</button>
+    
+<script>
+
+    function fetchJson() {
+        const todoNumber = document.querySelector("#num-input").value;    
+
+        fetch(`https://jsonplaceholder.typicode.com/todos/${todoNumber}`)
+            .then(res => res.json())
+            .then(json => console.log(json))
+    }
+    
+</script>
+
+</body>
+
+</html>
