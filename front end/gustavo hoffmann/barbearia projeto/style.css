@@ -1,0 +1,91 @@
+/* zerar a estrutura */
+* {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* definir estrutura padrão do body */
+
+.bg-home {
+    background-image: url(bg.svg);
+}
+
+header {
+    margin-top: 15px;
+    display: flex;
+    width: 100vw;
+}
+
+/* display flex vai deixar um ao lado do outro */
+.header-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.header-icons a:hover i {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+   color: white;
+   transition: all 0.2s;
+}
+
+.header-button {
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.2s;
+}
+
+.header-button:hover {
+   color: red;
+   border-color: red;
+}
+
+/* MAIN*/
+
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 70px;
+}
+
+.button-contact {
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: red;
+    padding: 15px 30px;
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+        opacity: 75%;
+    }
+
+}
+
+
