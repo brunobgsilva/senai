@@ -7,21 +7,45 @@
 </head>
 <body>
 
-    <button onclick="chamarServer()"> chamar server </button>
+    <button onclick="chamarPOST()"> chamar post </button>
+    <button onclick="chamarGET()"> chamar get </button>
 
-    <script>
+<script>
 
-        function chamarServer() {
-            fetch('http://localhost:8484/api/data', {
-                method: 'POST',
-                body: JSON.stringify(dados)
-            })
-            .then((res) => { 
-                console.log(res)
-            });
-        }
+    const dados = {nome: 'sabao'};
 
-    </script>
+    function chamarPOST() {
+        fetch('http://localhost:8484/api/data/', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*"
+            },
+            body: '{"nome": "oi"}'
+        })
+        .then(res => res.json())
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((error) => {
+            console.log('ERRO: ' + error)
+        })
+    }
+
+    function chamarGET() {
+        fetch('http://localhost:8484/api/data/', {
+            method: 'GET'
+        })
+        .then(res => res.json())
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((error) => {
+            console.log('ERRO: ' + error)
+        })
+    }
+
+</script>
 
 </body>
 </html>
