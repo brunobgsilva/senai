@@ -15,32 +15,37 @@
 
 <body>
     
-    <form id="user-register">
-        <div class="register-container">
+    <div id="root">
 
-            <div class="input-name">
-                <label for="#register-name-input">Nome: </label>
-                <input type="text" id="register-name-input" placeholder="Escreva seu nome." required>
-            </div>
-
-            <div class="input-email">
-                <label for="#register-email-input">E-mail: </label>
-                <input type="email" id="register-email-input" placeholder="Escreva seu email." required>
-            </div>
-
-            <div class="input-role">
-                <label for="#register-role-input">Função: </label>
-                <input type="text" id="register-role-input" placeholder="Escreva sua função." required>
-            </div>
-
-            <button type="submit" id="submit-user-register">Enviar</button>
-            
-        <div class="register-container">        
-    </form>
-
-    <div class="user-cards">
+        <form id="user-register">
+            <div class="register-container">
+    
+                <div class="input-container">
+                    <label for="#register-name-input">Nome: </label>
+                    <input type="text" id="register-name-input" class="register-input" placeholder="Escreva seu nome." required>
+                </div>
+    
+                <div class="input-container">
+                    <label for="#register-email-input">E-mail: </label>
+                    <input type="email" id="register-email-input" class="register-input" placeholder="Escreva seu email." required>
+                </div>
+    
+                <div class="input-container">
+                    <label for="#register-role-input">Função: </label>
+                    <input type="text" id="register-role-input" class="register-input" placeholder="Escreva sua função." required>
+                </div>
+    
+                <button type="submit" id="submit-user-register" class="submit-button">Enviar</button>
+                
+            <div class="register-container">        
+        </form>
+    
+        <div class="user-cards">
+    
+        </div>
 
     </div>
+
 
 </body>
 
