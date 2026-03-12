@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <div id="products-options">
+        <form id="post-product">
+                <span>Criar produto:</span>
+                <input type="text" id="product-name-input" placeholder="nome" required>
+                <input type="number" id="product-price-input" placeholder="preco" required>
+                <input type="text" id="product-description-input" placeholder="descricao" required>
+                <input type="text" id="product-img-input" placeholder="imagem" required>
+                <input type="text" id="product-category-input" placeholder="categoria" required>  
+                <button type="submit">enviar</button>  
+            </form>
+        
+            <br>
+            
+            <form id="get-product">
+                <span>buscar produto por id: </span>
+                <input type="number" id="product-id-input" placeholder="id do produto" required>
+                <button type="submit">buscar</button>  
+            </form>
+        
+            <br>
+        
+            <button id="get-all-products">Mostrar todos produtos</button>
+    </div>
+    
+
+    <br>
+    <br>
+
+    <div id="produtos">
+
+    </div>
+
+</body>
+
+</html>
