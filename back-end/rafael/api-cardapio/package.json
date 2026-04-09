@@ -1,0 +1,16 @@
+{
+  "name": "api-cardapio",
+  "version": "1.0.0",
+  "description": "API de cardapio",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "npx nodemon"
+  },
+  "dependencies": {
+    "express": "5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
