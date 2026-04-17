@@ -1,7 +1,10 @@
-const service = require("../services/pratos.services")
+const service = require("../services/pratos.services");
+const { logger } = require("../middlewares/logger.middleware.js");
+const { errorHandler } = require("../middlewares/errorHandler.middleware.js"); 
 
 function listar (req, res) {
   const pratos = service.listarPratos();
+  logger(req, res);
   return res.status(200).json(pratos)
 }
 
@@ -19,6 +22,10 @@ function criar (req, res) {
     if (!preco || !nome || !descricao || !categoria) {
       return res.status(400).json({error: 'Campos obrigatorios'})
     };
+
+    logger(req, res);
+
+    errorHandler(err, req, res, next);
 
     const novoPrato = service.criarNovoPrato({nome, descricao, preco, categoria})
     return res.status(201).json(novoPrato);
