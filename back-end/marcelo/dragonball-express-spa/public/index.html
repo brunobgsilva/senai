@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dragon Ball API - Express SPA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <div>
+      <h1>Dragon Ball API</h1>
+      <p>Single Page consumindo um backend Express</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="painel-controles">
+  <button id="btnPersonagens">Carregar personagens</button>
+      <button id="btnPlanetas" class="secundario">Carregar planetas</button>
+
+      <label>
+        Página:
+        <input id="pagina" type="number" min="1" value="1" />
+      </label>
+
+      <label>
+        Limite:
+        <input id="limite" type="number" min="1" max="20" value="10" />
+      </label>
+    </section>
+
+    <section id="mensagem" class="mensagem"></section>
+
+    <section>
+      <h2 id="tituloResultado">Resultados</h2>
+      <div id="lista" class="grid"></div>
+    </section>
+
+    <section id="detalhes" class="detalhes escondido"></section>
+  </main>
+
+  <footer class="rodape">
+    <p>Exemplo para aula de backend com Node.js e Express.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

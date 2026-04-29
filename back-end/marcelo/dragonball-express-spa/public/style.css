@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.topo {
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.topo h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.container {
+  width: min(1100px, 94%);
+  margin: 24px auto;
+}
+
+.painel-controles {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  border: none;
+  background: #333;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #111;
+}
+
+button.secundario {
+  background: #666;
+}
+
+input {
+  width: 70px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.mensagem {
+  margin: 16px 0;
+  font-weight: bold;
+}
+
+.grid {
+ display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card img {
+  max-height: 230px;
+  object-fit: contain;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.card button {
+  margin-top: auto;
+}
+
+.detalhes {
+  margin-top: 24px;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.detalhes img {
+  max-height: 300px;
+  display: block;
+  margin: 12px auto;
+  object-fit: contain;
+}
+
+.escondido {
+  display: none;
+}
+
+.rodape {
+  text-align: center;
+  color: #555;
+  padding: 24px;
+}
+    
