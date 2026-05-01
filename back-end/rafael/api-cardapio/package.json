@@ -2,15 +2,13 @@
   "name": "api-cardapio",
   "version": "1.0.0",
   "description": "API de cardapio",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "npx nodemon"
+    "start": "node src/index.js"
   },
   "dependencies": {
-    "express": "5.2.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
+    "dotenv": "^17.4.2",
+    "express": "5.2.1",
+    "pg": "^8.20.0"
   }
 }
