@@ -19,4 +19,4 @@ async function registrar(req, res) {
 
 };
 
-module.exports = { registar };
+module.exports = { registrar };

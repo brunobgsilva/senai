@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: devflix_postgres
+    restart: always
+    environment:
+       POSTGRES_DB: ${DB_NAME}
+       POSTGRES_USER: ${DB_USER}
+       POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - ${DB_PORT}
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./banco.sql:/docker-entrypoint-initdb.d/init.sql
+volumes:
+  pg_data:
