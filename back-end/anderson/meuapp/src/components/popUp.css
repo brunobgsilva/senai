@@ -1,0 +1,33 @@
+.popUpLogin {
+    position: fixed;
+    left: 40%;
+    top: 10%;
+    width: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.loginLabel {
+    position: relative;
+    right: 130px;
+}
+
+.loginInput {
+    width: 300px;
+}
+
+.loginButton, .cancelButton {
+    border-radius: 15px;
+    width: 80px;
+    height: 30px;
+    margin: 10px 0px;
+}
+
+.loginButton {
+    margin-top: 180px;
+}

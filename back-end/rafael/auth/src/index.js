@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use('/auth', authRoutes);
+app.use('/', authRoutes);
 
 app.listen(PORT, () => {
     console.log(`Servidor iniciado. URL: http://localhost:${PORT}`);
