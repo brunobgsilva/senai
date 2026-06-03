@@ -19,4 +19,24 @@ async function registrar(req, res) {
 
 };
 
+async function login(req, res) {
+    const {email, senha} = req.body;
+
+    if (!email || !senha) {
+        return res.status(400).json({erro: 'Campos obrigatórios: email, senha.'});
+    };
+
+    try {
+        const result = await service.login({email, senha})
+        return res.json(result)
+    } catch(err) {
+        if (err.message === 'Credenciais invalidas') {
+            return res.status(401).json({erro: err.message})
+        } else {
+            throw err
+        }
+    };
+
+};
+
 module.exports = { registrar };
